@@ -1,0 +1,28 @@
+javascript
+  function
+    -fun simple functions
+    -funes6 simple function es6 
+    -funexport simple function with export 
+  variables
+    -const simple contant
+    -let simple let
+    -exportconst simple const with export 
+  react 
+    -rc simple component 
+    -rfc simple component es6
+    -rcstate simple component with state 
+    -rceffect simple component with useEffect 
+    -usestate simple use state 
+    -useeffect simple use effect 
+    -useeffectrecurence useeffect with modifiable variable's
+  tailwind 
+    -cn className with variable 
+    -center flex center 
+    -apply css apply 
+  css 
+    -cn simple class 
+  init
+    -tailwindinit
+    -vitejsinit
+    -mainjsx
+    -scssinit

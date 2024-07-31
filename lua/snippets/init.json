@@ -1,0 +1,80 @@
+{
+  "tailwind init": {
+    "prefix": "-tailwindinit",
+    "body": [
+      "/** @type {import('tailwindcss').Config} */",
+      "export default {",
+      "  content: [\"./index.html\", \"./src/**/*.{js,ts,jsx,tsx}\"],",
+      "  theme: {",
+      "    screens: {",
+      "      m: { min: \"0px\", max: \"500px\" },",
+      "    },",
+      "    extend: {",
+      "      colors: {",
+      "        gray: \"#adbbda\",",
+      "        black: \"#00224D\",",
+      "        three: \"#5D0E41\",",
+      "        two: \"#A0153E\",",
+      "        one: \"#FF204E\"",
+      "      },",
+      "    },",
+      "  },",
+      "  plugins: [],",
+      "};"
+    ],
+    "description": "tailwind init"
+  },
+  "vite js init": {
+    "prefix": "-vitejsinit",
+    "body": [
+      "import { defineConfig } from \"vite\";",
+      "import react from \"@vitejs/plugin-react-swc\";",
+      "import generouted from \"@generouted/react-router/plugin\";",
+      "// https://vitejs.dev/config/",
+      "export default defineConfig({",
+      "  server: {",
+      "    port: 3000,",
+      "    host: true,",
+      "  },",
+      "  plugins: [react(), generouted()],",
+      "});"
+    ],
+    "description": "vite js init"
+  },
+  "main jsx init": {
+    "prefix": "-mainjsx",
+    "body": [
+      "import ReactDOM from \"react-dom/client\";",
+      "import \"./index.scss\";",
+      "import { Routes } from \"@generouted/react-router\";",
+      "ReactDOM.createRoot(document.getElementById(\"root\")).render(<Routes />);"
+    ],
+    "description": "main jsx init"
+  },
+  "index css init": {
+    "prefix": "-scssinit",
+    "body": [
+      "@tailwind base;",
+      "@tailwind components;",
+      "@tailwind utilities;",
+      ":root {",
+      "  font-family: \"Poppins\", sans-serif;",
+      "  font-size: 16px;",
+      "  font-synthesis: none;",
+      "  text-rendering: optimizeLegibility;",
+      "  -webkit-font-smoothing: antialiased;",
+      "  -moz-osx-font-smoothing: grayscale;",
+      "}",
+      "body,",
+      "html,",
+      "#root {",
+      "  padding: 0;",
+      "  margin: 0;",
+      "  height: 100%;",
+      "  background-color: $black;",
+      "  color: $white;",
+      "}"
+    ],
+    "description": "index css init"
+  }
+}
