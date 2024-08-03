@@ -89,7 +89,7 @@ else
       hl["@punctuation.bracket"] = { fg = c.magenta } -- For brackets and parens.
     end
   })
-  vim.cmd[[colorscheme solarized-osaka]]
+  -- vim.cmd[[colorscheme solarized-osaka]]
   vim.opt.fillchars:append { eob = " " }
   vim.cmd[[
     highlight RainbowDelimiterRed  guifg=#f4ca0d ctermfg=White
