@@ -1,36 +1,31 @@
 {
   "simple func": {
-    "prefix": "-func",
+    "prefix": "~func",
     "body": ["const $0 = ()=> {", "  $1", "}"],
     "description": "simple func"
   },
   "simple function with es6": {
-    "prefix": "-funces6",
+    "prefix": "~funces6",
     "body": ["const $0 = ($1)=> {", "  $2", "}"],
     "description": "simple function with es6"
   },
   "simple fucntion with export ": {
-    "prefix": "-funexport",
+    "prefix": "~funexport",
     "body": ["export default function $0 (){", "  $1", "}"],
     "description": "simple fucntion with export "
   },
   "simple variable es6": {
-    "prefix": "-const",
+    "prefix": "~const",
     "body": ["const $0 = $1"],
     "description": "simple variable es6"
   },
   "simple variable reusable es6": {
-    "prefix": "-let",
+    "prefix": "~let",
     "body": ["let $0 = $1"],
     "description": "simple variable reusable es6"
   },
-  "simple variable reusable es6": {
-    "prefix": "-let",
-    "body": ["export const $0 = $1"],
-    "description": "simple variable reusable es6"
-  },
   "simple component": {
-    "prefix": "-rc",
+    "prefix": "~rc",
     "body": [
       "export default function $0 (){",
       "  return <div>${TM_FILENAME}</div>",
@@ -39,7 +34,7 @@
     "description": "simple component"
   },
   "simple component es6": {
-    "prefix": "-rfc",
+    "prefix": "~rfc",
     "body": [
       "const $0 = ()=>{",
       "    return <div>${TM_FILENAME}</div>",
@@ -49,33 +44,60 @@
     "description": "simple component es6"
   },
   "simple use state": {
-    "prefix": "-usestate",
+    "prefix": "~usestate",
     "body": ["const [$0, set(${0/capitalise}] = React.useState($1)"],
     "description": "simple use state"
   },
   "simple use effect": {
-    "prefix": "-useeffect",
+    "prefix": "~useeffect",
     "body": ["React.useEffect (()=>{", "  $0", "})"],
     "description": "simple use effect"
   },
   "simple use effect with variable refresh": {
-    "prefix": "-useeffectwithvariable",
+    "prefix": "~useeffectwithvariable",
     "body": ["React.useEffect (()=>{", "  $0", "}, [$1])"],
     "description": "simple use effect with variable refresh"
   },
   "className ": {
-    "prefix": "-cn",
+    "prefix": "~cn",
     "body": ["className={` $0 `}"],
     "description": "className "
   },
   "center with tailwind": {
-    "prefix": "-center",
+    "prefix": "~center",
     "body": ["flex justify-center items-center"],
     "description": "center with tailwind"
   },
   "tailwind css add in class": {
-    "prefix": "-apply",
+    "prefix": "~apply",
     "body": ["@apply $0"],
     "description": "tailwind css add in class"
+  },
+  "simple input": {
+    "prefix": "~inp",
+    "body": [
+      "<input ",
+      "name='$1' ",
+      "type='$2' ",
+      "placeholder='$3'",
+      "value={$5} ",
+      "onChange={$4} />"
+    ],
+    "description": "simple input"
+  },
+  "simple input with icon": {
+    "prefix": "~inpicon",
+    "body": [
+      "<div className=\"relative\">",
+      "<$5 size={$6} className=\"absolute $7\" />",
+      "<input ",
+      "name='$1' ",
+      "type='$2' ",
+      "placeholder='$3'",
+      "value={$5} ",
+      "onChange={$4} />",
+      "</div>"
+    ],
+    "description": "simple input"
   }
 }

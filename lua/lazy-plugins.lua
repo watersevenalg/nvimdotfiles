@@ -1,8 +1,8 @@
 require('lazy').setup({
-  -- {
-  --   'Exafunction/codeium.vim',
-  --   event = 'BufEnter'
-  -- },
+  {
+    'Exafunction/codeium.vim',
+    event = 'BufEnter'
+  },
   {
     'nvim-java/nvim-java',
     dependencies = {
@@ -25,20 +25,20 @@ require('lazy').setup({
       }
     },
   },
-  -- {
-  --   "craftzdog/solarized-osaka.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {},
-  -- },
   {
-    "Tsuzat/NeoSolarized.nvim",
-    lazy = false,    -- make sure we load this during startup if it is your main colorscheme
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      vim.cmd [[ colorscheme NeoSolarized ]]
-    end
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
   },
+  -- {
+  --   "Tsuzat/NeoSolarized.nvim",
+  --   lazy = false,    -- make sure we load this during startup if it is your main colorscheme
+  --   priority = 1000, -- make sure to load this before all the other start plugins
+  --   config = function()
+  --     vim.cmd [[ colorscheme NeoSolarized ]]
+  --   end
+  -- },
   -- {
   --   "zbirenbaum/copilot.lua",
   --   cmd = "Copilot",

@@ -19,19 +19,18 @@ tnoremap <C-w>l <C-\><C-n><C-w>l<CR>
 tnoremap <C-h> <C-\><C-n><C-w>h<CR>
 ]]
 
--- vim.keymap.set({ 'n', 'v' }, '<Space>', '<Nop>', { silent = true })
-
+vim.keymap.set('n', "<a-c>", ":call codeium#Chat() <CR>")
+vim.keymap.set('i', '<a-cr>', function() return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
 vim.keymap.set('n', "<M-m>", ":BufferLineMoveNext<CR>")
 vim.keymap.set('n', "<M-b>", ":BufferLineMovePrev<CR>")
 vim.keymap.set('n', "<C-s>", ":wa!<CR>")
 vim.keymap.set('i', "<C-s>", "<ESC>:wa!<CR>a")
-
--- keymap.set("n", "<leader>", "")
+vim.keymap.set('n', "<a-c>", ":qa!<CR>")
 
 keymap.set("n", "<leader>bd", ":bd<CR>")
 keymap.set("n", "<leader>bx", ":bufdo bd<CR>")
-keymap.set("n", "<tab>", ":bnext<CR>")
-keymap.set("n", "<S-tab>", ":tabprev<CR>")
+keymap.set("n", "`", ":bnext<CR>")
+keymap.set("n", "<S><tab>", ":tabnext<CR>")
 keymap.set("n", "<S-a>", "gg<S-v>G")
 keymap.set("i", "ç", "<Esc>a")
 keymap.set('n', '<C-S-c>', ':CopilotChatOpen')
@@ -179,6 +178,10 @@ vim.keymap.set('n', '<leader>g', function()
     previewer = false,
   })
 end, { desc = '[/] Fuzzily search in current buffer' })
+
+
+vim.keymap.set('n', '<M-d> ', ':echo "md it worxxx" <cr>')
+
 
 nmap('<leader>L', '<cmd>lua vim.diagnostic.open_float({scope="line"}) <CR>', 'Show line diagnostic')
 keymap.set('n', '<leader>e', '<cmd>:NvimTreeToggle<CR>')
